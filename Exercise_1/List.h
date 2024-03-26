@@ -39,3 +39,5 @@ public:
 
     int GetCount();
 };
+
+#include "List.tpp"

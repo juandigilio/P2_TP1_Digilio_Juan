@@ -137,7 +137,7 @@
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="List.cpp" />
+    <None Include="List.tpp" />
     <None Include="Node.tpp" />
     <None Include="Queue.tpp" />
     <None Include="Stack.tpp" />

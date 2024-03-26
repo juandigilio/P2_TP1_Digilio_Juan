@@ -29,7 +29,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="List.cpp">
+    <None Include="List.tpp">
       <Filter>Source Files</Filter>
     </None>
     <None Include="Queue.tpp">

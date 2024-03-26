@@ -3,7 +3,7 @@
 #include "List.h"
 
 template <typename T>
-class Stack 
+class Stack
 {
 private:
     List<T>* list;
