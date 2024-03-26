@@ -1,11 +1,13 @@
 #pragma once
 
+#include <Windows.h>
+
 class Spawnable
 {
 protected:
 
     bool active;
-    int x, y;
+    COORD position;
 
 public:
 

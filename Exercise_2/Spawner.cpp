@@ -3,9 +3,10 @@
 #include <ctime>
 
 template<class T, int N>
-Spawner<T, N>::Spawner() : currentIndex(0) 
+Spawner<T, N>::Spawner()
 {
     pool.reserve(N);
+    currentIndex = 0;
 }
 
 template<class T, int N>

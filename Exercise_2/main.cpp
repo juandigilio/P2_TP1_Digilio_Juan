@@ -4,11 +4,17 @@
 #include <iostream>
 
 
+
+
 int main() 
 {
+    SetConsoleSize();
+
     srand(time(nullptr));
 
     Spawner<Character, 10> spawner;
+
+    char input;
 
     while (true) 
     {

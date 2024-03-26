@@ -3,14 +3,14 @@
 Spawnable::Spawnable()
 {
     active = false;
-    x = 0;
-    y = 0;
+    position.X = 0;
+    position.Y = 0;
 }
 
 void Spawnable::SetPosition(int x, int y)
 {
-    this->x = x;
-    this->y = y;
+    position.X = x;
+    position.Y = y;
 }
 
 void Spawnable::SetActive(bool isActive)

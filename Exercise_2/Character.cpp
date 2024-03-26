@@ -2,7 +2,12 @@
 
 #include <iostream>
 
-Character::Character(char color) : color(color)
+Character::Character(Color& color)
+{
+    this->color = color;
+}
+
+Character::~Character()
 {
 
 }
@@ -11,6 +16,6 @@ void Character::Draw()
 {
     if (IsActive()) 
     {
-        std::cout << "Drawing " << color << " character at position (" << x << ", " << y << ")" << std::endl;
+        ConsoleManager::SetCursor(position);
     }
 }

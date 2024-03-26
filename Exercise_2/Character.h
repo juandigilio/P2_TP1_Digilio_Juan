@@ -2,16 +2,17 @@
 
 #include "Entity.h"
 #include "Spawnable.h"
+#include "ConsoleManager.h"
 
 class Character : public Entity, public Spawnable 
 {
 private:
 
-    char color;
+    Color color;
 
 public:
 
-    Character(char color);
+    Character(Color& color);
     ~Character();
 
     void Draw() override;
