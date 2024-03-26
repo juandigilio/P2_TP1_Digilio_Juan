@@ -4,9 +4,9 @@
 
 enum class Color
 {
-	RED = 12,
-	GREEN = 10,
-	BLUE = 9
+	RED = 199,
+	GREEN = 160,
+	BLUE = 159
 };
 
 class ConsoleManager
@@ -14,10 +14,10 @@ class ConsoleManager
 public:
 
 	COORD cursorPosition;
-	COORD consoleSize;
+	static COORD consoleSize;
 	static HANDLE hwnd;
 
-	ConsoleManager(int& wide, int& height);
+	ConsoleManager(int wide, int height);
 	~ConsoleManager();
 
 	void SetConsoleSize();

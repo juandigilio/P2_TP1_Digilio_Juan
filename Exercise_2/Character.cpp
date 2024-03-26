@@ -16,6 +16,7 @@ void Character::Draw()
 {
     if (IsActive()) 
     {
-        ConsoleManager::SetCursor(position);
+        ConsoleManager::SetCursor(position, color);
+        std::cout << " ";
     }
 }

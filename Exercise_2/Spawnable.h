@@ -14,7 +14,7 @@ public:
     Spawnable();
     virtual ~Spawnable() {}
 
-    void SetPosition(int x, int y);
+    void SetPosition();
     void SetActive(bool active);
     bool IsActive();
 };

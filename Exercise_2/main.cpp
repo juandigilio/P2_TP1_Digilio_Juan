@@ -1,18 +1,19 @@
 #include "Spawner.h"
 #include "Character.h"
+#include "ConsoleManager.h"
 
 #include <iostream>
 
 
-
+const int maxEntitiesQnty = 10;
 
 int main() 
 {
-    SetConsoleSize();
-
     srand(time(nullptr));
 
-    Spawner<Character, 10> spawner;
+    ConsoleManager console(25, 15);
+
+    Spawner<Character*, maxEntitiesQnty> spawner;
 
     char input;
 
@@ -23,23 +24,21 @@ int main()
         switch (input) 
         {
         case 'R':
-            spawner.Spawn();
+            spawner.Spawn(Color::RED);
             break;
         case 'G':
-            spawner.Spawn();
+            spawner.Spawn(Color::GREEN);
             break;
         case 'B':
-            spawner.Spawn();
+            spawner.Spawn(Color::BLUE);
             break;
         case 'D':
-            
+            spawner.DeleteRandom();
             break;
         default:
             std::cout << "Invalid input" << std::endl;
             break;
         }
-
-        spawner.DrawAll();
     }
 
     return 0;

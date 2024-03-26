@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ConsoleManager.h"
+
 #include <vector>
 
 template<class T, int N>
@@ -8,13 +10,16 @@ class Spawner
 private:
 
     std::vector<T> pool;
-    int currentIndex;
+    int totalEntities;
 
 public:
 
     Spawner();
-    void Spawn();
+    virtual ~Spawner();
+
+    void Spawn(Color color);
+    void DeleteRandom();
     void DrawAll();
 };
 
-
+#include "Spawner.tpp"

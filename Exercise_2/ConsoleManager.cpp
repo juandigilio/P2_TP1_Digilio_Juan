@@ -1,6 +1,9 @@
 #include "ConsoleManager.h"
 
-ConsoleManager::ConsoleManager(int& wide, int& height)
+COORD ConsoleManager::consoleSize{};
+HANDLE ConsoleManager::hwnd{};
+
+ConsoleManager::ConsoleManager(int wide, int height)
 {
     consoleSize.X = wide;
     consoleSize.Y = height;

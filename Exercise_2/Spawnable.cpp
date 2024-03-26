@@ -1,5 +1,7 @@
 #include "Spawnable.h"
 
+#include "ConsoleManager.h"
+
 Spawnable::Spawnable()
 {
     active = false;
@@ -7,10 +9,10 @@ Spawnable::Spawnable()
     position.Y = 0;
 }
 
-void Spawnable::SetPosition(int x, int y)
+void Spawnable::SetPosition()
 {
-    position.X = x;
-    position.Y = y;
+    position.X = rand() % ConsoleManager::consoleSize.X;
+    position.Y = rand() % ConsoleManager::consoleSize.Y;
 }
 
 void Spawnable::SetActive(bool isActive)
