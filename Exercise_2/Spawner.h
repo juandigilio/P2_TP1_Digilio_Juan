@@ -9,7 +9,8 @@ class Spawner
 {
 private:
 
-    std::vector<T> pool;
+    //std::vector<T> pool;
+    T* pool[];
     int totalEntities;
 
 public:
@@ -22,4 +23,4 @@ public:
     void DrawAll();
 };
 
-#include "Spawner.tpp"
+//#include "Spawner.tpp"

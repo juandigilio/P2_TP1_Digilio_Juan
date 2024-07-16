@@ -12,7 +12,7 @@ private:
 
 public:
 
-    Character(Color& color);
+    Character();
     ~Character();
 
     void Draw() override;

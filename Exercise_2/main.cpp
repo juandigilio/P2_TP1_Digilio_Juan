@@ -3,15 +3,18 @@
 #include "ConsoleManager.h"
 
 #include <iostream>
+#include <conio.h>
 
 
 const int maxEntitiesQnty = 10;
+
+using namespace std;
 
 int main() 
 {
     srand(time(nullptr));
 
-    ConsoleManager console(25, 15);
+    ConsoleManager console(50, 25);
 
     Spawner<Character*, maxEntitiesQnty> spawner;
 
@@ -19,9 +22,9 @@ int main()
 
     while (true) 
     {
-        std::cin >> input;
+        input = _getch();
 
-        switch (input) 
+        switch (toupper(input))
         {
         case 'R':
             spawner.Spawn(Color::RED);

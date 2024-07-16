@@ -1,5 +1,5 @@
-#ifndef SPAWNER_TPP
-#define SPAWNER_TPP
+//#ifndef SPAWNER_TPP
+//#define SPAWNER_TPP
 
 #include "Spawner.h"
 #include "Character.h"
@@ -10,8 +10,15 @@
 template<class T, int N>
 Spawner<T, N>::Spawner()
 {
-    pool.reserve(N);
-    totalEntities = 0;
+    totalEntities = N;
+
+    pool = new T[totalEntities];
+
+    for (int i = 0; i < totalEntities; i++)
+    {
+        Character character;
+        pool[i] = character;
+    }
 }
 
 template<class T, int N>
@@ -28,8 +35,9 @@ Spawner<T, N>::~Spawner()
 template<class T, int N>
 void Spawner<T, N>::Spawn(Color color)
 {
-    Character* character = new Character(color);
-    character->SetPosition();
+    
+    //character->SetPosition();
+    //character->SetActive();
 
     pool.push_back(character);
 

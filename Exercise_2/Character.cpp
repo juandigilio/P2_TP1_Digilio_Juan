@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Character::Character(Color& color)
+Character::Character()
 {
     this->color = color;
 }

@@ -43,7 +43,7 @@ int main()
 
 float GetRandomFloat()
 {
-	return (rand() % 600 + 500) / 100.0f;
+	return (rand() % 600 + 400) / 100.0f;
 }
 
 template <typename T>
